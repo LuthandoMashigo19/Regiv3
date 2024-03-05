@@ -10,6 +10,16 @@ model = gen_ai.GenerativeModel('gemini-pro')
 chat = model.start_chat()
 extractedtext = ""
 
+#Set background image
+background_color = """
+<style>
+    background-color: #65a5a8
+    
+
+</style>
+"""
+
+st.markdown(background_color,unsafe_allow_html=True)
 
 def extract_text_from_pdf(file):
     reader = PyPDF2.PdfReader(file)
