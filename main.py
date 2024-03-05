@@ -24,9 +24,9 @@ st.title("Regi v2")
 
 uploaded_file = st.file_uploader("Upload your doucment")
 
-if uploaded_file:
-    extractedtext = extract_text_from_pdf(uploaded_file)
-    st.write(extractedtext)
+# if uploaded_file:
+#     extractedtext = extract_text_from_pdf(uploaded_file)
+#     st.write(extractedtext)
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{
