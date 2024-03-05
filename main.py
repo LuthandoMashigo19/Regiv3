@@ -11,15 +11,16 @@ chat = model.start_chat()
 extractedtext = ""
 
 #Set background image
-background_color = """
+background_img = """
 <style>
-    background-color: #65a5a8
-
-
+.stApp{
+    background-image: url("BackImage.png");
+    background-size: cover;
+}
 </style>
 """
 
-st.markdown(background_color,unsafe_allow_html=True)
+st.markdown(background_img,unsafe_allow_html=True)
 
 def extract_text_from_pdf(file):
     reader = PyPDF2.PdfReader(file)
