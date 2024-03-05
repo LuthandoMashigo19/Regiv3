@@ -14,7 +14,7 @@ extractedtext = ""
 background_color = """
 <style>
     background-color: #65a5a8
-    
+
 
 </style>
 """
@@ -34,9 +34,9 @@ st.title("Regi v2")
 
 uploaded_file = st.file_uploader("Upload your doucment")
 
-# if uploaded_file:
-#     extractedtext = extract_text_from_pdf(uploaded_file)
-#     st.write(extractedtext)
+if uploaded_file:
+    extractedtext = extract_text_from_pdf(uploaded_file)
+    st.write(extractedtext)
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{
@@ -54,7 +54,7 @@ if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
 
-    if uploaded_file:
+    if extractedtext:
         newprompt = prompt + " : " + extractedtext
         genAIRes = chat.send_message(newprompt)
 
