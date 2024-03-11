@@ -22,6 +22,7 @@ background_img = """
 
 st.markdown(background_img,unsafe_allow_html=True)
 
+
 def extract_text_from_pdf(file):
     reader = PyPDF2.PdfReader(file)
     text = ''
@@ -31,7 +32,7 @@ def extract_text_from_pdf(file):
     return text
 
 
-st.title("Regi v2")
+st.title("Sales Proposal Generator")
 
 uploaded_file = st.file_uploader("Upload your doucment")
 
