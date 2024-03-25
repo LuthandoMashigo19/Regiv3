@@ -23,7 +23,7 @@ def extract_text_from_pdf(file):
     return text
 
 
-st.title("Sales Proposal Generator")
+st.title("Sales Proposal Generator Test")
 
 uploaded_file = st.file_uploader("Upload your doucment")
 
