@@ -11,7 +11,8 @@ chat = model.start_chat()
 extractedtext = ""
 
 with st.sidebar:
-    "Hello this is sidebar"
+    st.subheader("Models")
+    selected_model = st.selectbox('Choose a model',['Gemini', 'Gemma','Finetuned_Lllama2','Otherfinetuned modelxs'],key = 'selected_model')
 
 
 def extract_text_from_pdf(file):
