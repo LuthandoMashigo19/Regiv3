@@ -10,17 +10,8 @@ model = gen_ai.GenerativeModel('gemini-pro')
 chat = model.start_chat()
 extractedtext = ""
 
-#Set background image
-background_img = """
-<style>
-.stApp{
-    background-image: url("BackImage.png");
-    background-size: cover;
-}
-</style>
-"""
-
-st.markdown(background_img,unsafe_allow_html=True)
+with st.sidebar:
+    "Hello this is sidebar"
 
 
 def extract_text_from_pdf(file):
