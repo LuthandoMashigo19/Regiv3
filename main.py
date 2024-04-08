@@ -11,61 +11,61 @@ chat = model.start_chat()
 extractedtext = ""
 
 #Set background image
-custom_style = """
-<style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f5f5f5; /* Light grey background */
-            position: relative; /* Added to position the navbar */
-        }
-        /*  Animation */
-        .bg {
-          animation:slide 3s ease-in-out infinite alternate;
-          background-image: linear-gradient(-60deg, #050708 50%, #09f 50%); /* Balck and blue blend*/
-          bottom:0;
-          left:-50%;
-          opacity:.5;
-          position:fixed;
-          right:-50%;
-          top:0;
-          z-index:-1;
-        }
+# custom_style = """
+# <style>
+#         body {
+#             font-family: 'Arial', sans-serif;
+#             margin: 0;
+#             padding: 0;
+#             height: 100vh;
+#             display: flex;
+#             justify-content: center;
+#             align-items: center;
+#             background: #f5f5f5; /* Light grey background */
+#             position: relative; /* Added to position the navbar */
+#         }
+#         /*  Animation */
+#         .bg {
+#           animation:slide 3s ease-in-out infinite alternate;
+#           background-image: linear-gradient(-60deg, #050708 50%, #09f 50%); /* Balck and blue blend*/
+#           bottom:0;
+#           left:-50%;
+#           opacity:.5;
+#           position:fixed;
+#           right:-50%;
+#           top:0;
+#           z-index:-1;
+#         }
 
-        .bg2 {
-          animation-direction:alternate-reverse;
-          animation-duration:4s;
-        }
+#         .bg2 {
+#           animation-direction:alternate-reverse;
+#           animation-duration:4s;
+#         }
 
-        .bg3 {
-          animation-duration:5s;
-        }
+#         .bg3 {
+#           animation-duration:5s;
+#         }
 
-        @keyframes slide {
-          0% {
-            transform:translateX(-25%);
-          }
-          100% {
-            transform:translateX(25%);
-          }
-        }
+#         @keyframes slide {
+#           0% {
+#             transform:translateX(-25%);
+#           }
+#           100% {
+#             transform:translateX(25%);
+#           }
+#         }
         
-</style>
-<html>
-    <body>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
-    </body>
-</html>
-"""
+# </style>
+# <html>
+#     <body>
+#         <div class="bg"></div>
+#         <div class="bg bg2"></div>
+#         <div class="bg bg3"></div>
+#     </body>
+# </html>
+# """
 
-st.markdown(custom_style,unsafe_allow_html=True)
+# st.markdown(custom_style,unsafe_allow_html=True)
 
 
 def extract_text_from_pdf(file):
